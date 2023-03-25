@@ -168,7 +168,7 @@ class Test_Orange:
         self.driver.find_element(by = By.XPATH, value = Orange_Locators().confirmpassword).send_keys(Orange_Data().loginPassword)
         self.driver.find_element(by = By.XPATH, value = Orange_Locators().Save_button).click()
         sleep(5)
-        assert self.driver.current_url.__contains__("PIM") == False
+        assert self.driver.current_url.__contains__("pim") == True
         print("Creation of Employee successful")
      except NoSuchElementException:
         print("No such Element found")
